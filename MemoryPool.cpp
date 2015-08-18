@@ -57,7 +57,7 @@ string* MemoryPool::allocate()
     
     if(free <= 0)
     {
-        cout<<"created new pointer"<<endl;
+        cout<<"Too small pool, created new pointer"<<endl;
         pool_list.push_back(new string);
         list_length++;
         filled++;  

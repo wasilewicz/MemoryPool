@@ -1,17 +1,20 @@
 #include "MemoryPool.h"
+#include "Stats.h"
 
 using namespace std;
 
 
 int main(int argc, char** argv) 
 {
+    Stats a;
     
-    MemoryPool a(3);
+    a.push("asdsaf");
+    a.push("safdsaf");
+    a.push("asdsaf");
+    a.push("asdsafdskflkdsf");
+    a.push("asdsaf");
     
-    for (auto i = a.pool_list.begin() ; i != a.pool_list.end() ; ++i)
-    {
-        cout<<*i<<endl;
-    }
+    a.printStats();
     
     return 0;
 }

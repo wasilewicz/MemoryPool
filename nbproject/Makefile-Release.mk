@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/MemoryPool.o \
+	${OBJECTDIR}/Stats.o \
 	${OBJECTDIR}/main.o
 
 
@@ -67,6 +68,11 @@ ${OBJECTDIR}/MemoryPool.o: MemoryPool.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MemoryPool.o MemoryPool.cpp
+
+${OBJECTDIR}/Stats.o: Stats.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Stats.o Stats.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
